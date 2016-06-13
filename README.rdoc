@@ -1,3 +1,4 @@
 == README
 
-This README is for my first Rails app of the Career Foundry Web Dev course.  
+This README is for my first Rails app of the Career Foundry Web Dev course.
+Changed origin URL from HTTPS to SSH.   
