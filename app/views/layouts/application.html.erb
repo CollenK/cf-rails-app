@@ -15,6 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
 <!-- Begin Nav -->
@@ -45,46 +46,51 @@
   </form>
 </nav> <!-- /nav -->
 
+<div class="content">
 <!-- Begin individual page content -->
 <%= yield %>
 <!-- /individual page content -->
+</div> <!-- /content -->
 
 <!-- Begin Footer Area -->
-<div class="container-fluid">
-  <footer class="site-footer">
-    <div class="row">
-      <div class="col-md-4 col-sm-12 tcenter top-padding-5">
+<footer class="container-fluid">
+  <div class="container-fluid">
+    <div class="row big-footer">
+      <div class="col-md-4 col-sm-12 tcenter footer-col">
         <h5>NAVIGATION</h5>
-        <nav class="nav nav-inline top-padding-5">
+        <nav class="nav nav-inline">
           <a class="nav-link" href="#">Our Story</a>
           <a class="nav-link" href="#">T&Cs</a>
           <a class="nav-link" href="#">Delivery</a>
         </nav>
       </div>
-      <div class="col-md-4 col-sm-12 tcenter top-padding-5">
+      <div class="col-md-4 col-sm-12 tcenter footer-col">
         <h5>JOIN OUR MAILING LIST</h5>
-        <form class="form-inline top-padding-5">
+        <form class="form-inline">
           <div class="form-group">
             <label class="sr-only" for="exampleInputEmail3">Enter Your Email Address</label>
-            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Your Email Address">
           </div>
           <button type="submit" class="btn btn-primary">Join</button>
         </form>
       </div>
-      <div class="col-md-4 col-sm-12 tcenter top-padding-5">
+      <div class="col-md-4 col-sm-12 tcenter">
         <h5>CONNECT WITH US</h5>
-        <nav class="nav nav-inline top-padding-5">
+        <nav class="nav nav-inline">
           <a class="nav-link fa fa-facebook-official fa-2x" href="#"></a>
           <a class="nav-link fa fa-instagram fa-2x" href="#"></a>
           <a class="nav-link fa fa-twitter-square fa-2x" href="#"></a>
         </nav>
       </div>
     </div>
-    <div class="tcenter">
-      Copyright &copy; 2016 Fuji Fanatics
+    <div class="row small-footer">
+      <div class="col-md-12 tcenter">
+      <p>Copyright &copy; 2016 Fuji Fanatics</p>
+      </div>
     </div>
-  </footer> <!-- /site-footer -->
-</div>
+  </div>
+</footer> <!-- /footer area -->
+
 
 
 

@@ -5,18 +5,6 @@
   text-align: center;
 }
 
-.top-padding-20 {
-  padding-top: 20px;
-}
-
-.top-padding-5 {
-  padding-top: 5px;
-}
-
-.bottom-padding-20 {
-  padding-bottom: 20px;
-}
-
 .jumbotron {
   background-image: asset-url("homeHeroOne.jpg");
   background-size: cover;
@@ -29,4 +17,26 @@
 
 .display-3 {
   margin-top: 150px;
+}
+// Sticky Footer
+.content {
+  min-height: calc(100vh - 148px);
+  // viewport height minus height of footer
+}
+
+.small-footer {
+  border-top: 1px solid #d8d8d8;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.big-footer {
+  border-top: 1px solid #d8d8d8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-col {
+  border-right: 1px solid #d8d8d8;
+  height: 68px;
 }
