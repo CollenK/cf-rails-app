@@ -23,6 +23,14 @@
     <%= f.label :image_url %><br>
     <%= f.text_field :image_url, class: 'form-control' %>
   </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price, step: 0.01, class: 'form-control' %>
+  </div>
   <div class="actions">
     <%= f.submit "Update Product", class: 'btn btn-primary' %>
   </div>
