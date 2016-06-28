@@ -2,15 +2,10 @@
 <html>
 <head>
   <title>Fuji Fanatics</title>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
   integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
-  <script src="https://use.fontawesome.com/dd85124ea4.js"></script>
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
-  integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
@@ -46,11 +41,11 @@
   </form>
 </nav> <!-- /nav -->
 
+<!-- Begin individual page content -->
 <div class="content">
-  <!-- Begin individual page content -->
   <%= yield %>
-  <!-- /individual page content -->
-</div> <!-- /content -->
+</div>
+<!-- /individual page content -->
 
 <!-- Begin Footer Area -->
 <footer class="container-fluid">
@@ -91,5 +86,14 @@
   </div>
 </footer> <!-- /footer area -->
 
+<!-- JavaScript and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+<script src="https://use.fontawesome.com/dd85124ea4.js"></script>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

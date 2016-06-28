@@ -14,6 +14,39 @@
 .display-3 {
   margin-top: 150px;
 }
+
+/* Carousel */
+
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+    color: #000;
+    font-size: 2em;
+    text-shadow: none;
+}
+
+.carousel-inner .carousel-item {
+  height: 100vh;
+}
+
+.carousel-indicators li {
+    border: 1px solid #000;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-control .icon-next,
+.carousel-control .icon-prev {
+    font-size: 90px;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
 // Sticky Footer
 .content {
   min-height: calc(100vh - 148px);
