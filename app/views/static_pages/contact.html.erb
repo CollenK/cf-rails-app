@@ -1,2 +1,25 @@
-<h1>Contact Fuji Fanatics</h1>
-<p>Keffiyeh raw denim green juice locavore, poutine slow-carb roof party meditation retro cred knausgaard vice cornhole. Meh godard food truck flannel trust fund chicharrones. Shabby chic selfies 3 wolf moon gentrify post-ironic chillwave. Banjo plaid synth, shoreditch schlitz whatever craft beer chicharrones direct trade hella post-ironic put a bird on it food truck salvia mustache. Hella aesthetic messenger bag swag, green juice cronut cred selfies pop-up echo park lumbersexual four loko. Bitters mixtape austin yuccie. Man bun blog pinterest biodiesel dreamcatcher jean shorts.</p>
+<div class="container-fluid text-xs-center">
+<h1>Contact Us</h1>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="form-group">
+      <%= label_tag :name %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </div>
+  </div>
+</div>
+<%= submit_tag "Send" %>
+<% end %>
+</div>

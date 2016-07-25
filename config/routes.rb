@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
+  post 'static_pages/thank_you'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
