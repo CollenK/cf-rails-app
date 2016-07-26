@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
 <!-- Begin Nav -->
 <nav class="navbar navbar-full navbar-dark bg-inverse">
   <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
@@ -26,6 +25,15 @@
       <li><%= link_to "Shop", products_path, class: "nav-item nav-link" %></li>
       <li><%= link_to "Contact", contact_path, class: "nav-item nav-link" %></li>
     </ul>
+    <ul class="nav nav-pills pull-right">
+      <li>
+        <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "nav-item nav-link") %>
+        <% else %>
+            <%= link_to('Login', new_user_session_path, class: "nav-item nav-link") %>
+        <% end %>
+      </li>
+    </ul>
   </div> <!-- /collapse -->
   <!-- Add Search field -->
   <%= form_tag("/products", method: "get", class: "form-inline pull-xs-right") do %>
@@ -34,6 +42,24 @@
     <%= submit_tag("Search", class: "btn btn-primary-outline") %>
   <% end %>
 </nav> <!-- /nav -->
+
+<!-- Add Alerts -->
+<%if alert %>
+<div class="alert alert-danger alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <%= alert %>
+</div>
+<% end %>
+<%if notice %>
+<div class="alert alert-info alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <%= notice %>
+</div>
+<% end %>
 
 <!-- Begin individual page content -->
 <div class="content">
