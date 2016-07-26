@@ -1,5 +1,44 @@
-<div class="panel panel-default">
-  <div class="panel-body">
-    <p>Thank you. We have received your message and will respond as soon as possible.</p>
-  </div><!-- / panel-body -->
-</div><!-- / panel -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="card card-block text-xs-center" id="thank-you">
+        <h4 class="card-title">Thank you.</h4>
+        <p class="card-text">We have received your message and will respond as soon as possible.</p>
+        <h5>In the meantime, continue shopping:</h5>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card card-inverse" id="category-img">
+        <%= image_tag 'cameras.png', class: "card-img", alt: "Card image" %>
+        <div class="card-img-overlay hvr-shutter-in-vertical">
+          <h4 class="card-title text-xs-center" id="category-name">Cameras</h4>
+          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card card-inverse" id="category-img">
+        <%= image_tag 'lenses.png', class: "card-img", alt: "Card image" %>
+        <div class="card-img-overlay">
+          <h4 class="card-title text-xs-center" id="category-name">Lenses</h4>
+          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card card-inverse" id="category-img">
+        <%= image_tag 'accessories.jpg', class: "card-img", alt: "Card image" %>
+        <div class="card-img-overlay">
+          <h4 class="card-title text-xs-center" id="category-name">Accessories</h4>
+          <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

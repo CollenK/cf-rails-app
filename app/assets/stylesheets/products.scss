@@ -5,6 +5,23 @@
   max-width: 300px;
 }
 
+.card-img {
+  max-width:400px;
+}
+
+#category-img {
+  border: none;
+}
+
+#category-name {
+  margin-top: 50px;
+  text-shadow: 2px 2px #000;
+}
+
+.card-img-overlay:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
 .img-thumbnail {
   border: none;
 }
