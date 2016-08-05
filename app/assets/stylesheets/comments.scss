@@ -1,3 +1,57 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.digg_pagination {
+  background: white;
+  cursor: default;
+  text-align: center;
+
+/* self-clearing method: */ }
+.digg_pagination a,
+.digg_pagination span,
+.digg_pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+.digg_pagination .disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+.digg_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #0275da;
+  color: white;
+  border: 1px solid #0275da;
+}
+
+.digg_pagination a {
+  text-decoration: none;
+  color: #0275da;
+  border: 1px solid #9aafe5;
+}
+
+.digg_pagination a:hover,
+.digg_pagination a:focus {
+    color: #000033;
+    border-color: #000033;
+}
+
+.digg_pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .digg_pagination {
+  height: 1%;
+}
+
+*:first-child + html .digg_pagination {
+  overflow: hidden;
+}
