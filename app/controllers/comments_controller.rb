@@ -15,6 +15,9 @@ class CommentsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def destroy
     @comment = Comment.find(params[:id])
     product = @comment.product
