@@ -5,7 +5,7 @@
     <h4 class="card-title"><%= product.name %></h4>
     <p class="card-text"><%= product.description %></p>
     <p class="card-text"><strong>Color: </strong><%= product.color %></p>
-    <p class="card-text"><strong>Price:</strong> $<%= product.price %></p>
+    <p class="card-text"><strong>Price: </strong><%= number_to_currency(product.price) %></p>
   </div>
   <div class="card-block">
     <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-success btn-sm' %>

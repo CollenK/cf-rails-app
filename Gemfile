@@ -6,7 +6,7 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.0'
 gem 'rails-controller-testing'
-
+gem 'stripe'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
