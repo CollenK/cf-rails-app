@@ -1,6 +1,8 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* Jumbotron */
+
 .jumbotron {
   background-image: asset-url("homeHeroOne.jpg");
   background-size: cover;
@@ -51,6 +53,12 @@
 
 #thank-you {
   border: none;
+}
+
+/* Add top margin to page content */
+
+.top-margin-20 {
+  margin-top: 20px;
 }
 
 // Sticky Footer
