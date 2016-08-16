@@ -1,4 +1,4 @@
-<h1 class="text-xs-center">All Products</h1>
+<h1 class="text-xs-center top-margin-20">All Products</h1>
 
 <div class="container-fluid">
   <div class="row">
@@ -6,6 +6,8 @@
   </div> <!-- /row -->
 <br>
   <div class="row text-xs-center">
-    <%= link_to 'New Product', new_product_path, class: 'btn btn-primary' %>
+    <% if user_signed_in? && current_user.admin %>
+      <%= link_to 'New Product', new_product_path, class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div> <!--/container -->

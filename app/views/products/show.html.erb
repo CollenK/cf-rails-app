@@ -19,15 +19,22 @@
         <strong>Description:</strong>
         <%= @product.description %>
       </p>
-      <%= form_tag "/payments" do %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
+      <% if user_signed_in? %>
+        <%= form_tag "/payments" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
+        <% end %>
+      <% else %>
+        In order to buy this product you have to <%= link_to "Login", new_user_session_path %>
+        <!---need to redirect to current product after sign in / sign up -->
       <% end %>
     </div>
   </div>
   <!-- /row -->
   <div class="row text-xs-center">
-    <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-success btn-sm' %>
+    <% if user_signed_in? && current_user.admin %>
+      <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-success btn-sm' %>
+    <% end %>
     <%= link_to 'Back', products_path, class: 'btn btn-primary btn-sm' %>
   </div> <br><br>
   <div class="alert alert-info" style="display:none" role="alert">
