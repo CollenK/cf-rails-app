@@ -1,4 +1,6 @@
 $(document).on('turbolinks:load', function(){
+
+  // Raty
   $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
   $('.rated').raty({ path: '/assets',
     readOnly: true,
@@ -6,4 +8,15 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+
+  // elevateZoom
+  $('.img-zoom').elevateZoom({
+    zoomType: "lens",
+    lensShape: "round",
+    lensSize: 300,
+      scrollZoom: true,
+			lensFadeIn: 500,
+			lensFadeOut: 500
+  });
+
 });
