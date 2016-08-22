@@ -1,7 +1,8 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-6 text-xs-center">
-      <%= image_tag(@product.image_url, data_zoom_image: @product.image_url ,class: "img-zoom img-thumbnail") %>
+      <% cache @product do %>
+        <%= image_tag(@product.image_url, data_zoom_image: @product.image_url ,class: "img-zoom img-thumbnail") %>
     </div>
     <div class="col-sm-6 padding-top-100">
       <h2>
@@ -19,14 +20,15 @@
         <strong>Description:</strong>
         <%= @product.description %>
       </p>
+      <% end %>
       <% if user_signed_in? %>
         <%= form_tag "/payments" do %>
           <%= render partial: "shared/stripe_checkout_button" %>
           <%= hidden_field_tag(:product_id, @product.id) %>
         <% end %>
       <% else %>
-        In order to buy this product you have to <%= link_to "Login", new_user_session_path %>
-        <!---need to redirect to current product after sign in / sign up -->
+        <%= link_to "Login or Sign Up to Buy", new_user_session_path, class: 'btn btn-primary btn-lg' %>
+        <!---Still need to redirect to current product after sign in / sign up -->
       <% end %>
     </div>
   </div>
