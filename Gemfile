@@ -29,6 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "dalli"
 # Use connection pooling for Puma's multi-threaded runtime
 gem 'connection_pool'
+# Add Redis
+gem 'redis-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
