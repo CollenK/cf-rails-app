@@ -9,6 +9,10 @@ class Ability
       can [:edit, :update, :read, :destroy], User, :id => user.id
       can :read, Product
       cannot [:edit, :update, :destroy], Product
+      can :create, Order
+      can :read, Order, user_id: user.id
+      can [:read, :create], Comment
+      can :destroy, Comment, user_id: user.id
     end
 
     # Define abilities for the passed in user here. For example:
