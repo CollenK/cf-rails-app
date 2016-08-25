@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-sm-6 text-xs-center">
       <% cache @product do %>
         <%= image_tag(@product.image_url, data_zoom_image: @product.image_url ,class: "img-zoom img-thumbnail") %>
@@ -34,16 +34,13 @@
   </div>
   <!-- /row -->
   <div class="row text-xs-center">
-    <% if user_signed_in? && current_user.admin %>
+    <% if user_signed_in? && current_user.admin? %>
       <%= link_to 'Edit', edit_product_path(@product), class: 'btn btn-success btn-sm' %>
     <% end %>
     <%= link_to 'Back', products_path, class: 'btn btn-primary btn-sm' %>
   </div> <br><br>
-  <div class="alert alert-info alert-dismissible fade in" style="display:none" role="alert">
+  <div class="alert alert-info" style="display:none" role="alert">
     A new comment was posted!
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
   </div>
   <div class="col-md-6 col-md-offset-3">
     <%= render 'new_comment' %>
