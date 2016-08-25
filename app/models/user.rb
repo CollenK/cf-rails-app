@@ -5,13 +5,4 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :orders
 
-  def ability
-		@ability ||= Ability.new(self)
-	end
-	delegate :can?, :cannot?, :to => :ability
-
-	def current_ability
-		current_user.ability
-	end
-
 end
