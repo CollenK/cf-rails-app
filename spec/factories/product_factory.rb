@@ -1,8 +1,11 @@
 FactoryGirl.define do
+
   factory :product do
-    name "Camera"
-    description "Test product"
-    color "Black"
-    price 100
+    name { Faker::Commerce.product_name }
+    description { Faker::Lorem.paragraph }
+    image_url { Faker::Internet.url }
+    color { Faker::Commerce.color }
+    price { Faker::Commerce.price }
   end
+
 end

@@ -11,15 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class: "form-control input-md", autofocus: true, placeholder: :first_name %><br>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, class: "form-control input-md", autofocus: true, placeholder: :last_name %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control input-md", autofocus: true, placeholder: :email %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %><br>
+    <%= f.text_field :password, class: "form-control input-md", autofocus: true, placeholder: :password %><br>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-default" %>
   </div>
 <% end %>
