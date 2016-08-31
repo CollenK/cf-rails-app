@@ -8,7 +8,7 @@ class Ability
     else
       can [:edit, :update, :read, :destroy], User, :id => user.id
       can :read, Product
-      cannot [:edit, :update, :destroy], Product
+      cannot [:create, :edit, :update, :destroy], Product
       can :create, Order
       can :read, Order, user_id: user.id
       can [:read, :create], Comment

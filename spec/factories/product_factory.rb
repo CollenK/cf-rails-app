@@ -6,6 +6,10 @@ FactoryGirl.define do
     image_url { Faker::Internet.url }
     color { Faker::Commerce.color }
     price { Faker::Commerce.price }
+
+    factory :invalid_product do
+      name nil
+    end
   end
 
 end

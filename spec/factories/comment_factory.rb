@@ -6,5 +6,9 @@ FactoryGirl.define do
     product
     body { Faker::Lorem.paragraph }
 
+    factory :invalid_comment do
+      body nil
+    end
+
   end
 end

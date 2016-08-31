@@ -64,7 +64,7 @@ describe UsersController, :type => :controller do
       end
     end
 
-    context "No user is logged in" do
+    context "no user is logged in" do
       it "redirects to login" do
         get :show, id: @user.id
         expect(response).to redirect_to root_url
@@ -91,22 +91,38 @@ describe UsersController, :type => :controller do
         end
       end
     end
-  end
 
-  # describe "POST #create" do
-  #   context "with valid attributes" do
-  #     it "saves the new user in the database" do
-  #       expect{
-  #         post :create, user: attributes_for(:user)
-  #       }.to change(User, :count).by(1)
-  #     end
-  #
-  #     it "redirects to users#show" do
-  #       post :create, user: attributes_for(:user)
-  #       expect(response).to redirect_to user_path(assigns[:user])
-  #     end
-  #   end
-  # end
+    describe "POST #create" do
+      before :each do
+        @user = attributes_for(:user)
+      end
+      context "with valid attributes" do
+        it "saves the new user in the database" do
+          expect{
+            post :create, user: attributes_for(:user)
+          }.to change(User, :count).by(1)
+        end
+
+        it "redirects to users#show" do
+          post :create, user: attributes_for(:user)
+          expect(response).to redirect_to user_path(assigns[:user])
+        end
+      end
+
+      context "with invalid attributes" do
+        it "does not save the new user in the database" do
+          expect{
+            post :create, user: attributes_for(:invalid_user)
+          }.not_to change(User, :count)
+        end
+
+        it "re-renders the :new template" do
+          post :create, user: attributes_for(:invalid_user)
+          expect(response).to render_template :new
+        end
+      end
+    end
+  end
 
   describe "PATCH #update" do
     before :each do

@@ -21,13 +21,13 @@
   </div>
   <div class="form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email, class: "form-control input-md", autofocus: true, placeholder: :email %><br>
+    <%= f.email_field :email, class: "form-control input-md", autofocus: true, placeholder: :email %><br>
   </div>
   <div class="form-group">
     <%= f.label :password %><br>
-    <%= f.text_field :password, class: "form-control input-md", autofocus: true, placeholder: :password %><br>
+    <%= f.password_field :password, class: "form-control input-md", autofocus: true, placeholder: :password %><br>
   </div>
   <div class="actions">
-    <%= f.submit class: "btn btn-default" %>
+    <%= f.submit "Create User", type: "submit", class: 'btn btn-primary' %>
   </div>
 <% end %>
