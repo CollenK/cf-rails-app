@@ -19,4 +19,13 @@ class UserMailer < ApplicationMailer
     @appname = "Fuji Fanatics"
     mail( :to => user.email, :subject => "Welcome to #{@appname}!")
   end
+
+  def paid_success(user, product)
+    @user = user
+    @product = product
+    mail(:from => 'collen.kriel@gmail.com',
+    
+        :to => @user.email,
+        :subject => "Fuji Fanatics: Order and Payment confirmation")
+  end
 end

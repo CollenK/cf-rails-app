@@ -14,9 +14,9 @@ class PaymentsController < ApplicationController
 
 		if charge.paid
 			Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price)
+      UserMailer.paid_success(@user, @product).deliver_now
+      flash[:success] = "Payment processed successfully"
 		end
-
-		flash[:success] = "Payment processed successfully"
 
   	rescue Stripe::CardError => e
       # The card has been declined
@@ -28,8 +28,8 @@ class PaymentsController < ApplicationController
   	redirect_to payments_thank_you_path
 
   end
-
-  def thank_you
-  end
   
+  # def thank_you
+  # end
+
 end
