@@ -105,7 +105,7 @@ describe UsersController, :type => :controller do
 
         it "redirects to users#show" do
           post :create, user: attributes_for(:user)
-          expect(response).to redirect_to user_path(assigns[:user])
+          expect(response).to redirect_to users_path
         end
       end
 
