@@ -1,16 +1,6 @@
 require "rails_helper"
 
 describe CommentsController, :type => :controller do
-
-  context "with invalid params" do
-    before do
-      @product = create(:product)
-    end
-    it "is invalid without body" do
-      expect(build(:invalid_comment)).to_not be_valid
-    end
-  end
-
   before do
     @product = create(:product)
     @comment = build(:comment).attributes
